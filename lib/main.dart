@@ -79,7 +79,7 @@ class _RecipeListScreenState extends State<RecipeListScreen> {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Recipe List'),
+        title: Text('Recipe'),
         actions: [
           IconButton(
             icon: Icon(themeNotifier.isDarkTheme ? Icons.light_mode : Icons.dark_mode),
