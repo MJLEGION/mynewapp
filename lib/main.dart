@@ -5,6 +5,7 @@ import 'recipe_service.dart';
 import 'FavouriteScreen.dart';
 import 'RecipeDetailScreen.dart';
 import 'theme_notifier.dart';
+import 'splash_screen.dart';
 
 void main() {
   runApp(
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: themeNotifier.currentTheme,
-      home: RecipeListScreen(),
+      home: SplashScreen(), // Set the splash screen as the initial screen
     );
   }
 }

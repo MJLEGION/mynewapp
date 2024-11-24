@@ -117,4 +117,4 @@ class _RecipeListScreenState extends State<RecipeListScreen> {
         crossAxisSpacing: 10,
       ),
       itemCount: recipes.length,
-      itemBuilder: (context, index
+      itemBuilder: (context, index;

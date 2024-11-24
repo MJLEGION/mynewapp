@@ -21,5 +21,4 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/
-
+    - assets/images/legion_logo.png
