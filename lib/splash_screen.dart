@@ -19,7 +19,9 @@ class _SplashScreenState extends State<SplashScreen> {
     await Future.delayed(const Duration(seconds: 3), () {});
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => RecipeListScreen()), // Navigate to RecipeListScreen after splash
+      MaterialPageRoute(
+          builder: (context) =>
+              RecipeListScreen()), // Navigate to RecipeListScreen after splash
     );
   }
 
@@ -35,7 +37,10 @@ class _SplashScreenState extends State<SplashScreen> {
             SizedBox(height: 20),
             Text(
               'LEGION',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+              style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
           ],
         ),

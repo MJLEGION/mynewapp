@@ -8,7 +8,11 @@ class Recipe {
   String instructions;
   final String imageUrl;
 
-  Recipe({required this.id, required this.name, this.instructions = "", required this.imageUrl});
+  Recipe(
+      {required this.id,
+      required this.name,
+      this.instructions = "",
+      required this.imageUrl});
 
   factory Recipe.fromJson(Map<String, dynamic> json) {
     return Recipe(
@@ -30,11 +34,13 @@ Future<List<Recipe>> fetchBasicRecipes() async {
     final Map<String, dynamic> data = json.decode(response.body);
     final List<dynamic>? recipes = data['meals'];
     if (recipes != null) {
-      return recipes.map((recipe) => Recipe(
-        id: recipe['idMeal'],
-        name: recipe['strMeal'],
-        imageUrl: recipe['strMealThumb'], // Include image URL
-      )).toList();
+      return recipes
+          .map((recipe) => Recipe(
+                id: recipe['idMeal'],
+                name: recipe['strMeal'],
+                imageUrl: recipe['strMealThumb'], // Include image URL
+              ))
+          .toList();
     } else {
       throw Exception('No recipes found.');
     }
